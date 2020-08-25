@@ -1,14 +1,30 @@
 import React from "react";
-import { CompoundForm } from "../components/CompoundForm";
+import CompoundForm from "../components/CompoundForm";
 import Container from '@material-ui/core/Container';
-import { InterestTable } from "../components/InterestTable";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles(() => ({
+  calculator: {
+    minHeight: '100vh',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  container: {
+    display: 'flex',
+    flexFlow: 'column',
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
+}));
 
 const Calculator = () => {
+  const classes = useStyles();
+
   return (
-    <section id="calculator">
-      <Container maxWidth="sm">
+    <section id="calculator" className={classes.calculator}>
+      <Container className={classes.container}>
         <CompoundForm />
-        <InterestTable />
       </Container>
     </section>
   )

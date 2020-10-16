@@ -66,7 +66,7 @@ const CompoundForm = () => {
                 variant="h3"
                 
               >
-                Flow Protocol
+                Flow Interest Calculator
               </Link>
             </Grid>
             <Grid item xs={11} className={classes.root}>

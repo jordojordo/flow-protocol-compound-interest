@@ -1,10 +1,11 @@
 import React from "react";
 import { Typography, Link } from "@material-ui/core";
-import { withStyles, makeStyles } from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/core/styles";
 import TableHead from "@material-ui/core/TableHead";
 import TableCell from "@material-ui/core/TableCell";
 import TableRow from "@material-ui/core/TableRow";
 import Tooltip from "@material-ui/core/Tooltip";
+
 
 const StyledTableRow = withStyles((theme) => ({
   root: {
@@ -42,29 +43,30 @@ const InterestTableHead = () => {
           interactive
           title={
             <>
-              <Typography color="inherit">
+              <Typography style={{ marginBottom: "1rem" }}>
+                <b>This is the ending date of each era.</b>
+              </Typography>
+              <Typography color="inherit" style={{ marginBottom: ".5rem" }}>
                 <Link
                   color="primary"
                   href="https://flowprotocol.io"
                   target="_blank"
                 >
-                  <u><b>FLOW</b></u>
+                  <u>
+                    <b>FLOW</b>
+                  </u>
                 </Link>
-                &nbsp;token and its
-                distribution are governed by&nbsp;
+                &nbsp;token and its distribution are governed by&nbsp;
                 <Link
                   color="primary"
                   href="https://flowprotocol.io/static/media/flow-protocol.df8f84c5.pdf#page=3"
                   target="_blank"
                 >
-                  <u><b>Eras</b></u>
+                  <u>
+                    <b>Eras</b>
+                  </u>
                 </Link>
                 . At the end of each Era the inflation rate is halved.
-              </Typography>
-              <Typography color="inherit">
-                The first era, called the Genesis Era, lasts for 60 days. After
-                the Genesis Era there are 10 additional Eras, each lasting for
-                365 days.
               </Typography>
             </>
           }
@@ -75,8 +77,11 @@ const InterestTableHead = () => {
           interactive
           title={
             <>
-              <Typography color="inherit">
-                An Ethereum based self-distributing store of value token (FLOW).
+              <Typography style={{ marginBottom: "1rem" }}>
+                <b>
+                  This is the your compounded amount of FLOW at the end of each
+                  era.
+                </b>
               </Typography>
               <Typography color="inherit">
                 <Link
@@ -84,7 +89,9 @@ const InterestTableHead = () => {
                   href="https://flowprotocol.io/static/media/flow-protocol.df8f84c5.pdf#page=1"
                   target="_blank"
                 >
-                  <u><b>FLOW</b></u>
+                  <u>
+                    <b>FLOW</b>
+                  </u>
                 </Link>
                 &nbsp;is designed to be a hedge against Bitcoin as today’s
                 primary digital store of value.
@@ -94,7 +101,7 @@ const InterestTableHead = () => {
         >
           <StyledTableCell align="right">FLOW</StyledTableCell>
         </StyledTooltip>
-        
+
         <StyledTooltip
           interactive
           title={
@@ -106,7 +113,9 @@ const InterestTableHead = () => {
                   href="https://www.coingecko.com/en/coins/flow-protocol"
                   target="_blank"
                 >
-                  <u><b>price</b></u>
+                  <u>
+                    <b>price</b>
+                  </u>
                 </Link>
                 &nbsp;in USD.
               </Typography>
@@ -114,7 +123,6 @@ const InterestTableHead = () => {
           }
         >
           <StyledTableCell align="right">Price&nbsp;(usd)</StyledTableCell>
-
         </StyledTooltip>
       </StyledTableRow>
     </TableHead>

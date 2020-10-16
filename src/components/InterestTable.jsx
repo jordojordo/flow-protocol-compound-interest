@@ -40,8 +40,7 @@ const InterestTable = () => {
   const classes = useStyles();
 
   const eras = [
-    "Genesis",
-    "Oct 10, 2020",
+    "Oct 10, 2020 (Genesis)",
     "Oct 10, 2021",
     "Oct 10, 2022",
     "Oct 10, 2023",
@@ -52,6 +51,7 @@ const InterestTable = () => {
     "Oct 8, 2028",
     "Oct 8, 2029",
     "Oct 8, 2030",
+    "Oct 8, 2031"
   ];
 
   return (
